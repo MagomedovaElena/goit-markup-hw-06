@@ -24,8 +24,9 @@ ul {
     width: 1200px;
     padding: 0px 15px 0px 15px;
     margin: 0 auto;
-    
 }
+
+
 /* header */
 .top-header {
     padding-top: 24px;
@@ -532,11 +533,7 @@ margin-bottom: 20px;
     top: 0;
     transition: opacity 500ms linear, visibility 500ms linear;
 }
-/* .backdrop.is-hidden .modal{
-    transform: rotate(180deg);
-    transition: transform 500ms linear;
 
-} */
 .modal {
     position: absolute;
     width: 500px;
@@ -581,15 +578,44 @@ margin-bottom: 20px;
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 20px;
+ 
+}
+.modal-form-wrapper {
+    position: relative;
+    display: block;
+    margin-top: 6px;
+
 }
 .modal-form-input {
     width: 100%;
     height: 40px;
-    margin-top: 6px;
-    padding-left: 30px;
+    padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 8.2);
     border-radius: 4px;
+    transition: border-color 250ms linear;
+
 }
+.modal-form-input:focus {
+    outline: none;
+    border-color: #2196F3;
+
+}
+.modal-form-icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    background-color: teal;
+    transition: border-color 250ms linear;
+
+}
+.modal-form-input:focus+ .modal-form-icon {
+    background-color: #2196F3;
+}
+
 .modal-form-message {
     width: 100%;
     height: 120px;
@@ -598,7 +624,30 @@ margin-bottom: 20px;
     border: 1px solid rgba(33, 33, 33, 8.2);
     border-radius: 4px;
     resize: none;
+    transition: border-color 250ms linear;
 
+}
+.modal-form-message::placeholder {
+    text-transform: uppercase;
+    color: rgba(117, 117, 117, 0. 5);
+
+}
+.modal-form-message:focus {
+    outline: none;
+    border-color: #2196F3;
+
+.modal-form-checkbox-label::before {
+    display: block;
+    content: "";
+    width: 18px;
+    height: 18px;
+    border: 1px solid #303030;
+    cursor: pointer;
+}
+.modal-form-checkbox:checked + .
+modal-form-checkbox-label::before {
+    background-color: var(--accent-color);
+    box-shadow: inset 0 0 0 4px #ffffff;
 }
 
 
